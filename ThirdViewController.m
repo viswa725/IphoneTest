@@ -33,6 +33,7 @@
     [simpleTableView setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:simpleTableView];
     
+    NSLog(@"test for Git");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
