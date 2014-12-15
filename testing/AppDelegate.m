@@ -21,7 +21,7 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
     self.window.backgroundColor = [UIColor blueColor];
-    NSLog(@"after created tag");
+    NSLog(@"creating new tag");
     [self.window makeKeyAndVisible];
     return YES;
 }
