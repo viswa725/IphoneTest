@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0CB69571-7D56-438F-B72A-21F85EC5B200</string>
+	<key>IDESourceControlProjectName</key>
+	<string>testing</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B9405C964062885A2965777E6DC311417457CCEC</key>
+		<string>http://github.com/viswa725/IphoneTest.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>testing.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B9405C964062885A2965777E6DC311417457CCEC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://github.com/viswa725/IphoneTest.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B9405C964062885A2965777E6DC311417457CCEC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B9405C964062885A2965777E6DC311417457CCEC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>practice</string>
+		</dict>
+	</array>
+</dict>
+</plist>

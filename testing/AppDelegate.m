@@ -18,101 +18,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    gFirst = [[UITextField alloc]initWithFrame:CGRectMake(50, 50, 100, 50)];
-    UITextField *second = [[UITextField alloc]initWithFrame:CGRectMake(170, 50, 100, 50)];
-    [gFirst setTag:1];
-    [second setTag:2];
-    [gFirst setBackgroundColor:[UIColor grayColor]];
-    [second setBackgroundColor:[UIColor grayColor]];
-    [self.window addSubview:gFirst];
-    [self.window addSubview:second];
-    
-    UILabel *sum = [[UILabel alloc]initWithFrame:CGRectMake(50, 150, 100, 50)];
-    [sum setBackgroundColor:[UIColor whiteColor]];
-    [sum setTag:3];
-    [self.window addSubview:sum];
-    
-    
-    UIButton *add = [[UIButton alloc]initWithFrame:CGRectMake(170, 150, 100, 50)];
-    [add setBackgroundColor:[UIColor blackColor]];
-    [add setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [add setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [add setTitle:@"ADD" forState:UIControlStateNormal];
-    [add setTitle:@"ADD" forState:UIControlStateHighlighted];
-    [add setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [add setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-    [add addTarget:self action:@selector(anyFunction) forControlEvents:UIControlEventTouchUpInside];
-    [self.window addSubview:add];
-    
-    [self sliderMethod];
-    
-    [self tabBar];
-    
-    //comment out this block of code if you want to see your calculator
-    {
-//        FirstViewController *fvc = [[FirstViewController alloc]init];
-//        UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:fvc];
-//        self.window.rootViewController = navController;
-    }
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     
     self.window.backgroundColor = [UIColor blueColor];
+    NSLog(@"after created tag");
     [self.window makeKeyAndVisible];
     return YES;
 }
-
--(void)tabBar {
-    SecondViewController *svc = [[SecondViewController alloc]init];
-    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:svc];
-    nav1.tabBarItem = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
-    
-    ThirdViewController *tvc = [[ThirdViewController alloc]init];
-    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:tvc];
-    nav2.tabBarItem = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:1];
-    
-    UITabBarController *tabBar = [[UITabBarController alloc]init];
-    tabBar.viewControllers = [[NSArray alloc]initWithObjects:nav1,nav2, nil];
-    self.window.rootViewController = tabBar;
-}
-
--(void)anyFunction {
-    UITextField *second = (UITextField *)[self.window viewWithTag:2];
-    int a, b;
-    
-    [gFirst setBackgroundColor:[UIColor cyanColor]];
-    a = gFirst.text.intValue;
-    b = second.text.intValue;
-    
-    gFirst.delegate = self;
-    second.delegate = self;
-    
-    NSString *add = [NSString stringWithFormat:@"%d",a + b];
-    UILabel *sum = (UILabel *)[self.window viewWithTag:3];
-    sum.text = add;
-
-}
-
--(void)sliderMethod {
-    UISlider *slide = [[UISlider alloc] initWithFrame:CGRectMake(50,200, 150, 50)];
-    [slide setMaximumValue:1];
-    [slide setMinimumValue:0];
-    [slide setValue:0.5];
-    [slide addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
-    [slide setBackgroundColor:[UIColor orangeColor]];
-    [self.window addSubview:slide];
-    
-}
-
--(void)change:(UISlider *)slide {
-    int slider = slide.value;
-    [gFirst setAlpha:slider];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    [textField resignFirstResponder];
-    return YES;
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

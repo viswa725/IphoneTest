@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AVFoundation/AVFoundation.h>
+
+#import <QuartzCore/QuartzCore.h>
+
 @interface FirstViewController : UIViewController
+{
+    AVCaptureSession *session;
+    NSTimer *timerAppBG;
+}
+-(void)applicationWillResign;
 
 @end
